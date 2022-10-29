@@ -1,8 +1,5 @@
 <form [formGroup]="cardForm">
-  <input formControlName="name">
-  <div *ngIf="cardForm.controls.name.errors">
-    Value is required
-  </div>
+  <app-input label="Enter Name" [control]="cardForm.controls.name"></app-input>
 </form>
 
 
