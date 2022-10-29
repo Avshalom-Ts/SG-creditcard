@@ -1,8 +1,12 @@
 <form [formGroup]="cardForm">
   <input formControlName="name">
+  <div *ngIf="cardForm.controls.name.errors">
+    Value is required
+  </div>
 </form>
 
 
-//For Debuging
+<!-- //For Debuging -->
 <div>Form Content: {{cardForm.value | json}} </div>
 <div>Form is valid: {{cardForm.valid}} </div>
+<div>Errors around name: {{cardForm.controls.name.errors | json}} </div>
